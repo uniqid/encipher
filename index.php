@@ -3,8 +3,8 @@
 
 Encipher - the PHP code encode tool
 Author: Jacky Yu <jacky325@qq.com>
-Copyright (c): 2012-2016 Jacky Yu, All rights reserved
-Version: 1.1.1
+Copyright (c): 2012-2017 Jacky Yu, All rights reserved
+Version: 1.1.2
 
 * This library is free software; you can redistribute it and/or modify it.
 * You may contact the author of Encipher by e-mail at: jacky325@qq.com
@@ -32,8 +32,8 @@ $encipher->advancedEncryption = true;
 $encipher->comments = array(
     'Encipher - the PHP code encode tool',
     'Author: Jacky Yu <jacky325@qq.com>',
-    'Copyright (c): 2012-2016 Jacky Yu, All rights reserved',
-    'Version: 1.1.1',
+    'Copyright (c): 2012-2017 Jacky Yu, All rights reserved',
+    'Version: 1.1.2',
     '',
     '* This library is free software; you can redistribute it and/or modify it.',
     '* You may contact the author of Encipher by e-mail at: jacky325@qq.com',
