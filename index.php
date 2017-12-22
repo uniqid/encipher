@@ -15,7 +15,7 @@ https://github.com/uniqid/encipher
 *************************************************/
 
 $app = str_replace('\\', '/', dirname(__FILE__));
-require_once($app . '/lib/encipher.min.php');
+require_once($app . '/lib/encipher.php');
 
 $original = $app . '/original'; //待加密的文件目录
 $encoded  = $app . '/encoded';  //加密后的文件目录
@@ -27,20 +27,6 @@ $encipher = new Encipher($original, $encoded);
  * 高级模式使用了eval函数
  */
 $encipher->advancedEncryption = true;
-
-//设置注释内容
-$encipher->comments = array(
-    'Encipher - the PHP code encode tool',
-    'Author: Jacky Yu <jacky325@qq.com>',
-    'Copyright (c): 2012-2017 Jacky Yu, All rights reserved',
-    'Version: 1.1.2',
-    '',
-    '* This library is free software; you can redistribute it and/or modify it.',
-    '* You may contact the author of Encipher by e-mail at: jacky325@qq.com',
-    '',
-    'The latest version of Encipher can be obtained from:',
-    'https://github.com/uniqid/encipher'
-);
 
 echo "<pre>\n";
 $encipher->encode();
