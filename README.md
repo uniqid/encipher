@@ -1,4 +1,4 @@
-##Encipher - the PHP code encode tool##
+## Encipher - the PHP code encode tool ##
 
 php code encode &amp; decode
 
@@ -8,7 +8,7 @@ Good luck!
 
 
 
-##Encipher - PHP代码加密工具##
+## Encipher - PHP代码加密工具 ##
 
 1.本加密程序是用PHP代码写的。
 
@@ -20,7 +20,7 @@ Good luck!
 
 
 
-#注意#
+# 注意 #
 
 1.该加密程序未经严格测试，如果使用该加密程序，一切后果作者概不负责。
 
