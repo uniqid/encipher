@@ -5,8 +5,8 @@ Author: Jacky Yu <jacky325@qq.com>
 Copyright (c): 2012-2017 Jacky Yu, All rights reserved
 Version: 1.1.2
 
-* This library is free software; you can redistribute it and/or modify it.
-* You may contact the author of Encipher by e-mail at: jacky325@qq.com
+ * This library is free software; you can redistribute it and/or modify it.
+ * You may contact the author of Encipher by e-mail at: jacky325@qq.com
 
 The latest version of Encipher can be obtained from:
 https://github.com/uniqid/encipher
@@ -274,8 +274,14 @@ EOT;
      * get php encoded code
      */
     private function _getPHPEncode($file, $enkey, $dekey){
-        $code   = $this->_getPHPCode($file);
-        $enCode = strtr(base64_encode($code), $enkey, $dekey);
+        //如果是php文件，才进行混淆
+        if(strstr($file,'.php')){
+            $code   = $this->_getPHPCode($file);
+            $enCode = strtr(base64_encode($code), $enkey, $dekey);
+        }else{
+            return '';
+        }
+
         return $enCode;
     }
 
@@ -333,7 +339,13 @@ EOT;
    
     private function _saveEncryptFile($file, $enCode, $enkey = null, $dekey = null){
         $to = $this->encoded_file . '/' . $file;
-        file_put_contents($to, $enCode);
+        //如果是php文件，存储混淆后的代码到目标路径，否则按原样复制
+        if(strstr($file,'.php')){
+            file_put_contents($to, $enCode);
+        }else{
+            file_put_contents($to,file_get_contents($this->source_file . '/' . $file));
+        }
+
         echo $to . "\n";
     }
 }
