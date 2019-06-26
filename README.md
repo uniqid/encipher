@@ -1,10 +1,19 @@
 ## Encipher - the PHP code encode tool ##
 
-php code encode &amp; decode
+php代码批量混淆与恢复
 
-A simple demo (see ./index.php)
+**相比主干，做了以下优化**
 
-Good luck!
+1.只对php文件混淆，其他类型的文件原样复制
+
+2.执行时可指定源码绝对路径和指定目标目录的名称
+
+
+**执行方法**
+
+`cd $DIR; //切换到该项目要目录`
+
+`php encode.php -o '源码绝根目录绝对路径' -e 'encoded目录下的相对路径';`
 
 
 
@@ -16,7 +25,7 @@ Good luck!
 
 3.加密使用方法详见：./index.php
 
-> 其中：./encoded目录下存放的就是加密后的实例。
+> 其中：./encoded/*目录下存放的就是加密后的实例。
 
 
 
